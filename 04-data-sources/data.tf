@@ -18,3 +18,9 @@ output "price" {
 output "ami" {
   value = data.aws_ami.example.id
 }
+data "aws_security_group" "selected" {
+  name= "allow-all"
+}
+output "sgid" {
+  value = data.aws_security_group.selected.id
+}

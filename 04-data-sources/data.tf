@@ -11,7 +11,7 @@ output "price" {
   value = data.aws_ec2_spot_price.example.spot_price
 }
 data "aws_security_group" "selected" {
-  id= "allow all"
+  name= "allow all"
 }
 output "sgid" {
   value = data.aws_security_group.selected.id

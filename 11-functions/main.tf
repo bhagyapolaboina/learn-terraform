@@ -6,7 +6,7 @@
        value = upper(var.class)
      }
      variable "fruits" {
-       default = [grape]
+       default = ["grape"]
      }
      output "fruits_count" {
        value = length(var.fruits)

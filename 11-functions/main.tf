@@ -8,7 +8,7 @@ output "class" {
 variable "fruits" {
   default = ["apple,banana,orange"]
 }
-output "fruits_count" {
+output "fruit_count" {
   value = length(var.fruits)
 }
 variable "classes" {

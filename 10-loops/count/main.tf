@@ -12,3 +12,6 @@ data "aws_ami" "example" {
   most_recent = true
   name_regex  = "workstation"
 }
+variable "instances" {
+  default = ["fronted,catalogue,cart"]
+}

@@ -4,8 +4,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = var.instances[count.index]
-  }
+    Name = "hello world "
 }
 data "aws_ami" "example" {
   owners=["106797252878"]

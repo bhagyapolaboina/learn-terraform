@@ -13,5 +13,5 @@ data "aws_ami" "example" {
   name_regex  = "workstation"
 }
 variable "instances" {
-  default = ["fronted,catalogue,cart"]
+  default = ["fronted","catalogue","cart"]
 }

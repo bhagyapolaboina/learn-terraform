@@ -11,4 +11,12 @@
      output "fruits_count" {
        value = length(var.fruits)
      }
+     variable "classes" {
+       default = {
+         devops = {
+           name = "devops"
+           topics
+         }
+       }
+     }
 

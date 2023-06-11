@@ -3,5 +3,5 @@
      }
      ##print the san ein capital letters
      output "class" {
-       value = var.class
+       value = upper(var.class)
      }

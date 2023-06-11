@@ -16,10 +16,11 @@ variable "instances" {
   default = {
     fronted = {
       name = "fronted"
-      instance_type = "t3.micro"
+      instance_type = "t3.nano"
     }
     catalogue = {
       name = "catalogue"
+      instance_type = "t3.nano"
 
     }
     cart = {

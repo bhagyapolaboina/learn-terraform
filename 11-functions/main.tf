@@ -25,6 +25,6 @@ variable "classes" {
 output "devops_topics" {
   value = var.classes["devops"]["topics"]
 }
-output "devops_topics" {
+output "aws_topics" {
   value = lookup(var.classes,"aws",null)
 }

@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
   }
 }
 resource "aws_route53_record" "www" {
-  zone_id = Z05657691DMN12JJJ11JY
+  zone_id = "Z05657691DMN12JJJ11JY"
   name    = "${var.name}-dev"
   type    = "A"
   ttl     = "30"

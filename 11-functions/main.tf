@@ -35,6 +35,6 @@
        default = 100
      }
      output "a" {
-       value = var.a > 100 ? "surplus quantity" : "less quantity"
+       value = var.a > 50 ? "surplus quantity" : "less quantity"
      }
 

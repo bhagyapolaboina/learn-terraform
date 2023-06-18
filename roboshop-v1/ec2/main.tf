@@ -15,17 +15,11 @@ resource "aws_instance" "web" {
     }
     inline = [
       "sudo labauto ansible",
-      "ansible-pull -i localhost -u https://github.com/bhagyapolaboina/roboshop-ansible.git main.yml -e env=dev -e role_name=${var.name}"
+      "ansible-pull -i localhost, -u https://github.com/bhagyapolaboina/roboshop-ansible.git main.yml -e env=dev -e role_name=${var.name}"
     ]
   }
 }
-resource "aws_route53_record" "www" {
-  zone_id = "Z05657691DMN12JJJ11JY"
-  name    = "${var.name}-dev"
-  type    = "A"
-  ttl     = "30"
-  records = [aws_instance.web.private_ip]
-}
+
 data "aws_ami" "example" {
   owners=[106797252878]
   most_recent = true
@@ -38,10 +32,10 @@ resource "aws_security_group" "sg" {
 
 
   ingress {
-
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
+    description      = "SSH"
+    from_port        = 22
+    to_port          = 22
+    protocol         = "tcp"
     cidr_blocks      = ["0.0.0.0/0"]
 
   }
@@ -51,7 +45,7 @@ resource "aws_security_group" "sg" {
     to_port          = 0
     protocol         = "-1"
     cidr_blocks      = ["0.0.0.0/0"]
-
+    ipv6_cidr_blocks = ["::/0"]
   }
 
   tags = {

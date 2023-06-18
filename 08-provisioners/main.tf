@@ -6,7 +6,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = "HelloWorld"
   }
-  provisioner "remote-exec"{
+  provisioner "remote-exec" {
     connection {
       type     = "ssh"
       user     = "centos"

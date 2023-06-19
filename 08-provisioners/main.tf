@@ -7,6 +7,7 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
   provisioner "remote-exec" {
+
     connection {
       type     = "ssh"
       user     = "centos"
@@ -15,7 +16,7 @@ resource "aws_instance" "web" {
     }
     inline = [
       "sudo labauto ansible",
-      "ansible-pull -i localhost, -U https://github.com/bhagyapolaboina/roboshop-ansible.git main.yml -e env=dev -e role_name=fronted"
+
     ]
   }
 }

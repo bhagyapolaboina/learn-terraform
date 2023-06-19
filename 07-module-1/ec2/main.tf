@@ -39,3 +39,4 @@ resource "aws_security_group" "sg" {
     Name = var.name
   }
 }
+variable "name" {}

@@ -1,1 +1,1 @@
-url= "example.com"
+url= "Example.com"

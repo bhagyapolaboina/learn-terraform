@@ -39,7 +39,3 @@ resource "aws_security_group" "sg" {
     Name = var.name
   }
 }
-variable "name" {}
-output "public_ip" {
-  value = aws_instance.web.public_ip
-}

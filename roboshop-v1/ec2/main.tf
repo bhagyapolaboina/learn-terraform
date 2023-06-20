@@ -6,6 +6,7 @@ resource "aws_instance" "web" {
   tags = {
     Name = var.name
   }
+
   provisioner "remote-exec" {
     connection {
       type     = "ssh"
